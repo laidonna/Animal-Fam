@@ -11,7 +11,7 @@ firebase.initializeApp(config);
 
 
 var chatData = firebase.database().ref();
-var thisChatAnimal = "Cow";
+var thisChatAnimal = "Horse";
 
 
 function findKeyword(response){
@@ -30,22 +30,35 @@ function pushMessage(event){
     $('#messageInput').val('');
     var text2 = text.trim();
 
-    if (text2.indexOf('trump') >= 0 ){
-      findKeyword('Moo-ve to Canada');
-    }else if(text2.indexOf('unicorn') >= 0){
-      findKeyword('Those are not real');
+
+    if ((text2.indexOf('bye') >= 0)
+            ||(text2.indexOf('bb') >= 0)
+            ||(text2.indexOf('cya') >= 0)
+            ||(text2.indexOf('sup') >= 0)){   
+      findKeyword('The mustang out with the wrong people.');
     }else if((text2.indexOf('hi') >= 0)
             ||(text2.indexOf('hey') >= 0)
             ||(text2.indexOf('hello') >= 0)
             ||(text2.indexOf('greetings') >= 0)
             ||(text2.indexOf('salutation') >= 0)
             ||(text2.indexOf('address') >= 0)
-            ||(text2.indexOf('yo') >= 0)){
-            
-    
-      findKeyword('Moo there!! *cow greets you*');
+            ||(text2.indexOf('yo') >= 0)){   
+      findKeyword('Your non-existent beard is nice and horse.');
+    }
+      else if((text2.indexOf('stress') >= 0)
+            ||(text2.indexOf('life is hard') >= 0)
+            ||(text2.indexOf('study') >= 0)){   
+      findKeyword('Common mate, i’ll bale you out of studying.');
+    }
+    else if((text2.indexOf('sick') >= 0)
+            ||(text2.indexOf('tired') >= 0)
+            ||(text2.indexOf('fml') >= 0)
+            ||(text2.indexOf('leave me alone') >= 0)
+            ||(text2.indexOf('why is life so hard') >= 0)
+            ||(text2.indexOf('kill me now') >= 0)){   
+      findKeyword('You’re never pasture prime. The stuff night mares are made of.');
     }else{
-      findKeyword('yo');
+      findKeyword('You should just neigh away like me...niegh~~');
     }
   }
 }

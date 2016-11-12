@@ -30,6 +30,7 @@ function pushMessage(event){
     $('#messageInput').val('');
     var text2 = text.trim();
 
+
     if (text2.indexOf('trump') >= 0 ){
       findKeyword('Moo-ve to Canada');
     }else if(text2.indexOf('unicorn') >= 0){
