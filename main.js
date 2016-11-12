@@ -20,6 +20,23 @@ function findKeyword(response){
       chatData.push({name: name, text: text});
       $('#messageInput').val('');
 }
+function randomResponses(){
+  var randResponses = ["Deja Moo", 
+                      "You are udder chaos", 
+                      "My favorite subject is Cow-culus. Wbu?", 
+                      "You’re not listening. Info goes in one ear, and out the udder!", 
+                      "Baby cows go to lunch in the calf-ateria", 
+                      "My favorite city is Moo-York",
+                      "I’m udderly confused!", 
+                      "Cow puns are moo-sic to my ears.",
+                      "I like my coffee decalfinated",
+                      "That’s offal",
+                      "It’s time to moo-ve on",
+                      "Well.. at least you’re not like that cow who walked into the street without looking for cars. He didn’t know his life was at steak."];
+  var index = getRandomInt(0,randResponses.length-1);
+  var rand = randResponses[index];
+  return rand;
+}
 
 
 function pushMessage(event){
@@ -45,7 +62,7 @@ function pushMessage(event){
     
       findKeyword('Moo there!! *cow greets you*');
     }else{
-      findKeyword('yo');
+      findKeyword(randomResponses());
     }
   }
 }
