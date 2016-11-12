@@ -21,7 +21,6 @@ function findKeyword(response){
       $('#messageInput').val('');
 }
 
-
 function pushMessage(event){
   if (event.keyCode == 13){
     var name = $('#nameInput').val();
@@ -47,7 +46,7 @@ function pushMessage(event){
             ||(text2.indexOf('sup') >= 0)){
       findKeyword('Bye Bye pork chops!');
     }else{
-      findKeyword('yo');
+      findKeyword('Stahp yo.');
     }
   }
 }
