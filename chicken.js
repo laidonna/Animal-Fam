@@ -21,6 +21,20 @@ function findKeyword(response){
       $('#messageInput').val('');
 }
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function randomResponses(){
+  var randResponses = ["Bach Bach Bach! You should listen to some Baroque :)",
+                      "I ate lots of food this morning, but I feel peckish", 
+                      "My least favorite day is Fry-day", "Well that person sure is cocky", 
+                      "I understand you want to keep squawking, but you should get to work!", 
+                      "I’m working around the cluck!!"];
+
+  var index = getRandomInt(0,randResponses.length-1);
+  var rand = randResponses[index];
+  return rand;
+}
 
 function pushMessage(event){
   if (event.keyCode == 13){
@@ -63,7 +77,7 @@ function pushMessage(event){
       findKeyword('Here’s a lesson I learned when I traveled: never be that chicken who crossed the street…');
     }
     else{
-      findKeyword('yo');
+      findKeyword(randomResponses());
     }
   }
 }
